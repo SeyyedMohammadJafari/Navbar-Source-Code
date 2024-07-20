@@ -1,0 +1,58 @@
+body {
+    background-color: rgb(0, 0, 0);
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+nav {
+    backdrop-filter: blur(3px);
+    border-radius: 5px;
+    box-shadow: 0 5px 30px 0 rgba(22, 32, 220, 0.37);
+    padding-right: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+ul {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+}
+
+ul li {
+    color: #fff;
+    display: grid;
+    place-content: center;
+    margin: 0;
+}
+
+.logo{
+    color: #fff;
+    cursor: pointer;
+}
+
+.menu {
+    color: #ffffff;
+    padding: 0.5rem;
+    position: relative;
+    text-decoration: none;
+}
+
+.menu::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ff0000;
+    border-radius: 5px;
+    transform: scaleX(0);
+    transition: all .5s ease;
+    bottom: 0;
+    left: 0;
+}
+
+.menu:hover::before {
+    transform: scaleX(1);
+}
